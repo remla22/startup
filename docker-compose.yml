@@ -1,0 +1,10 @@
+services:
+  model:
+    image: "ghcr.io/remla22/sms-spam-detection:latest"
+
+  web:
+    image: "test"
+    ports:
+     - "8080:8080"
+    environment:
+     - MODEL_HOST=http://model:8080
